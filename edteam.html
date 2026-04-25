@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policy Program | Education Team</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f3f3f3;
+      color: #111;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background: rgba(10, 35, 70, 0.95);
+      color: white;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-small {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-large {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .nav-link {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: white;
+      color: #0c4d83;
+    }
+
+    main {
+      padding-top: 76px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 40px;
+      background: url('ioppolicy1.png') center/cover no-repeat;
+    }
+
+    .hero-box {
+      background: rgba(255, 255, 255, 0.95);
+      border: 10px solid #16679b;
+      padding: 28px 34px;
+      max-width: 700px;
+    }
+
+    .hero-box h1 {
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      color: #101a69;
+      line-height: 1.05;
+    }
+
+    .section {
+      padding: 56px 60px;
+    }
+
+    .section-light {
+      background: #efefef;
+    }
+
+    .section-red {
+      background: #db4b5b;
+      color: white;
+    }
+
+    .accent-line {
+      width: 62px;
+      height: 8px;
+      background: #ff1733;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .research-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .research-image-box {
+      background: #f3f3f3;
+      border-radius: 22px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    .research-text {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      font-size: 1rem;
+      padding-top: 8px;
+    }
+
+    .research-text h3 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .research-text p {
+      margin-bottom: 14px;
+    }
+
+    .briefs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .brief-card {
+      background: #0d6797;
+      color: white;
+      min-height: 230px;
+      border-radius: 24px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .brief-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .brief-card h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .brief-card p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 900px) {
+      .research-layout,
+      .briefs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 20px;
+      }
+
+      main {
+        padding-top: 105px;
+      }
+
+      .hero,
+      .section {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .hero-box {
+        padding: 20px;
+        border-width: 7px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="policy logo.png" alt="Policy Program Logo" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-small">Institute of Politics</span>
+        <span class="brand-large">Policy Program</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projectsresearch.html" class="nav-link">Policy Briefs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-box">
+        <h1>Education Team</h1>
+      </div>
+    </section>
+
+    <section class="section section-red">
+      <div class="accent-line"></div>
+      <h2>Current Research</h2>
+
+      <div class="research-layout">
+        <img src="yourimage.png" alt="Current research image" class="research-image-box" />
+
+        <div class="research-text">
+          <h3>Description of current research</h3>
+          <p>
+            Add your current research summary here. This can be a short paragraph
+            explaining what the team is studying, why it matters, and what the
+            project is focused on this semester.
+          </p>
+          <p>
+            You can also use this space for a second paragraph with more detail,
+            such as policy relevance, methods, goals, or what stage the work is in.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="accent-line"></div>
+      <h2>Past Policy Briefs</h2>
+
+      <div class="briefs-grid">
+        <a href="new.html" class="brief-card">
+          <h3>Title</h3>
+          <p>description</p>
+        </a>
+
+        <a href="new.html" class="brief-card">
+          <h3>Title</h3>
+          <p>description</p>
+        </a>
+
+        <a href="new.html" class="brief-card">
+          <h3>Title</h3>
+          <p>description</p>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
