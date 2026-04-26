@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policy Program | Projects & Research</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f3f3f3;
+      color: #111;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background: rgba(10, 35, 70, 0.95);
+      color: white;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-small {
+      font-size: 0.8rem;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-large {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav-link {
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      background: white;
+      color: #0c4d83;
+    }
+
+    main {
+      padding-top: 80px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      background: url('ioppolicy1.png') center/cover no-repeat;
+    }
+
+    .hero-box {
+      background: white;
+      border: 8px solid #16679b;
+      padding: 30px;
+    }
+
+    .hero-box h1 {
+      font-size: 3rem;
+      color: #101a69;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 60px;
+    }
+
+    .section-blue {
+      background: #0d6797;
+      color: white;
+    }
+
+    .accent-line {
+      width: 60px;
+      height: 8px;
+      background: #ff1733;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 6px;
+
+      font-family: Arial, sans-serif;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .card-red {
+      background: #db4b5b;
+      color: white;
+    }
+
+    .card-light {
+      background: #f3f3f3;
+      color: #222;
+    }
+
+    /* TEXT STYLES */
+    .card-meta {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.8;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding: 30px;
+      }
+
+      .section {
+        padding: 30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="policy logo.png" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-small">Institute of Politics</span>
+        <span class="brand-large">Policy Program</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projectsresearch.html" class="nav-link active">Policy Briefs</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-box">
+        <h1>Projects & Research</h1>
+      </div>
+    </section>
+
+    <!-- POLICY BRIEFS -->
+    <section class="section section-blue">
+      <div class="accent-line"></div>
+      <h2>Policy Briefs</h2>
+
+      <div class="card-grid">
+
+        <a href="Health_S24.pdf" class="card card-red">
+          <span class="card-meta">Health Team, Spring 2024</span>
+          <div class="card-title">Bridging Gaps in Care: Strategic Policy Initiatives for Enhancing Health Care Services for Aging Women</div>
+          <div class="card-desc">Aging women in the United States are one of the most vulnerable demographic groups in
+terms of receiving adequate healthcare. While biological, socioeconomic, social, and
+environmental factors have significant impacts on women’s aging...
+  </div>
+        </a>
+
+        <a href="CriminalJustice_F23.pdf" class="card card-light">
+          <span class="card-meta">Criminal Justice Team, Fall 2023</span>
+          <div class="card-title">Community-Police Relations: Fostering Better Outcomes Between the Community and Police, and Evaluating Alternatives to Police</div>
+          <div class="card-desc">Given the ever-changing dynamic of community-police relations in the United States, it is
+imperative to analyze and understand effective systems to prevent and...</div>
+        </a>
+
+        <a href="Health_S23.pdf" class="card card-red">
+          <span class="card-meta">Health Team, Spring 2023</span>
+          <div class="card-title">Greener Places, Healthy Spaces: A Novel Preventative Method to Reduce Breast Cancer Risk</div>
+          <div class="card-desc">This policy brief aims to address the social determinants of health that increase a person's
+risk of getting cancer, specifically by examining the relationship between tree canopies,
+greenspace, and cancer outcomes. Access to greenspace is an...</div>
+        </a>
+
+        <a href="Housing_S23.pdf" class="card card-light">
+          <span class="card-meta">Housing Team, Spring 2023</span>
+          <div class="card-title">A Directed Inventory of Federal Homelessness Research</div>
+          <div class="card-desc">The purpose of this brief is to help advance the creation and implementation of the
+Biden-Harris Administration’s Federal Strategic Plan to End and Prevent Homelessness, which
+aims to reduce homelessness by 25 percent by 2025. By...</div>
+        </a>
+        
+        <a href="CriminalJustice_F22.pdf" class="card card-red">
+          <span class="card-meta">Criminal Justice Team, Fall 2022</span>
+          <div class="card-title">School Resource Officers and the School-to-Prison Pipeline: Evaluating
+Responses to School Safety Concerns in an Age of School Shootings and
+Renewed Calls for Racial Justice</div>
+          <div class="card-desc">When instances of gun violence and school shootings reached a pinnacle in the...</div>
+        </a>
+
+        <a href="Immigration_F22.pdf" class="card card-light">
+          <span class="card-meta">Immigration Team, Fall 2022</span>
+          <div class="card-title">Status of Border Migration on US-Mexico Border</div>
+          <div class="card-desc">The National Network for Immigrant and Refugee Rights (NNIRR) works to defend and
+expand the rights of all immigrants and refugees, regardless of immigration status. For decades,
+NNIRR has worked collaboratively with communities and organizations  to highlight the impacts
+of immigration enforcement on border...</div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
